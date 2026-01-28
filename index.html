@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/jpg" href="img/logo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tudominio.com/">
+    <meta property="og:title" content="Softify | Desarrollo de Software Estratégico">
+    <meta property="og:description"
+        content="Ayudamos a empresas a escalar con Apps Móviles, Sistemas Web y Embudos de Venta. Ingeniería certificada en Bolivia.">
+    <meta property="og:image" content="https://tudominio.com/img/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tudominio.com/">
+    <meta property="twitter:title" content="Softify | Agencia de Software">
+    <meta property="twitter:description" content="Transformación digital y software a medida en Sucre, Bolivia.">
+    <meta property="twitter:image" content="https://tudominio.com/img/og-image.jpg">
+    <title>Softify | Agencia de Software & Transformación Digital</title>
+    <meta name="description"
+        content="Agencia de desarrollo de software en Sucre, Bolivia. Expertos en Apps Móviles, Sistemas Web y E-commerce.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- WhatsApp Context Strategy -->
+    <script type="module" src="js/contact.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=Lora:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Tipografía Base */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-serif {
+            font-family: 'Lora', serif;
+        }
+
+        .font-mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* Efecto de Ruido (Film Grain) */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Texto de contorno para fondo */
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+            color: transparent;
+        }
+
+        /* Ocultar Scrollbar pero permitir scroll */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Utilidades de Animación */
+        .memory-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Typewriter Cursor */
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: white;
+            animation: blink 1s step-end infinite;
+            margin-left: 4px;
+            vertical-align: baseline;
+            height: 1em;
+            /* Adapts to font size */
+        }
+
+        .cursor.gold {
+            background-color: #f1c500;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black text-neutral-300 antialiased selection:bg-[#f1c500] selection:text-black">
+
+    <div class="grain-overlay"></div>
+
+    <div
+        class="fixed top-0 left-0 w-full h-full pointer-events-none z-50 p-6 flex flex-col justify-between mix-blend-difference text-white/30">
+        <div class="flex justify-between items-start">
+            <span class="iconify" data-icon="lucide:plus" width="20"></span>
+            <span class="iconify" data-icon="lucide:plus" width="20"></span>
+        </div>
+        <div class="flex justify-between items-end">
+            <span class="iconify" data-icon="lucide:plus" width="20"></span>
+            <div class="flex items-center gap-4">
+                <span class="text-[10px] font-mono text-neutral-500 uppercase">SCROLL</span>
+                <span class="iconify" data-icon="lucide:arrow-down" width="16"></span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-40 bg-gradient-to-b from-black/95 to-transparent pt-6 pb-12 backdrop-blur-sm">
+        <div class="flex max-w-7xl mx-auto px-6 items-center justify-between">
+            <div class="flex items-center gap-3 group cursor-pointer">
+                <div
+                    class="w-8 h-8 bg-[#f1c500] text-black flex items-center justify-center font-black text-xs tracking-tighter group-hover:rotate-180 transition-transform duration-500">
+                    S
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold tracking-[0.2em] text-white uppercase leading-none">
+                        SOFTIFY
+                    </span>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-neutral-500 uppercase leading-none">
+                        AGENCIA DE SOFTWARE
+                    </span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white z-50 relative group">
+                <span class="sr-only">Menu</span>
+                <div class="space-y-2">
+                    <span class="block w-8 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#f1c500]"></span>
+                    <span class="block w-8 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#f1c500]"></span>
+                </div>
+            </button>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#servicios"
+                    class="text-[10px] uppercase tracking-[0.2em] font-medium text-neutral-400 hover:text-[#f1c500] transition-colors border-b border-transparent hover:border-[#f1c500] pb-1">Soluciones</a>
+                <a href="#proyectos"
+                    class="text-[10px] uppercase tracking-[0.2em] font-medium text-neutral-400 hover:text-[#f1c500] transition-colors border-b border-transparent hover:border-[#f1c500] pb-1">Casos
+                    de Éxito</a>
+                <a href="#experiencia"
+                    class="text-[10px] uppercase tracking-[0.2em] font-medium text-neutral-400 hover:text-[#f1c500] transition-colors border-b border-transparent hover:border-[#f1c500] pb-1">La
+                    Agencia</a>
+                <a href="#faq"
+                    class="text-[10px] uppercase tracking-[0.2em] font-medium text-neutral-400 hover:text-[#f1c500] transition-colors border-b border-transparent hover:border-[#f1c500] pb-1">FAQ</a>
+                <a href="#" data-wa-action="nav-cotizar"
+                    class="px-4 py-2 border border-white/20 text-[10px] uppercase tracking-[0.2em] text-white hover:bg-[#f1c500] hover:text-black hover:border-[#f1c500] transition-all">
+                    Cotizar
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex flex-col justify-center items-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="img/ft-perfil.jpg" class="w-full h-full object-cover opacity-50 grayscale" alt="Tech Background">
+
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black"></div>
+        </div>
+
+        <div class="relative z-20 text-center space-y-8 max-w-5xl mt-20 md:mt-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-[10px] uppercase tracking-widest text-neutral-400">Disponible para nuevos
+                    proyectos</span>
+            </div>
+
+            <h2 class="text-5xl md:text-7xl font-black tracking-tighter text-white uppercase leading-[0.9] min-h-[2em]">
+                <span id="type-line-1"></span><span id="cursor-1" class="cursor"></span>
+                <br>
+                <span id="type-line-2"
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-[#f1c500] via-[#ffd700] to-[#bfa12f]"></span><span
+                    id="cursor-2" class="cursor gold hidden"></span>
+            </h2>
+
+            <p class="text-sm md:text-xl text-neutral-400 font-serif italic max-w-2xl mx-auto leading-relaxed">
+                "Transformamos negocios tradicionales en líderes digitales. Desde Sucre, Bolivia, diseñamos software
+                escalable para el mercado global."
+            </p>
+
+            <div class="pt-8 flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#" data-wa-action="hero"
+                    class="px-8 py-4 bg-[#f1c500] hover:bg-white text-black font-bold text-xs tracking-[0.2em] uppercase transition-all duration-300 w-full md:w-auto text-center">
+                    Iniciar Proyecto
+                </a>
+                <a href="#proyectos"
+                    class="px-8 py-4 border border-white/20 hover:border-white text-white font-bold text-xs tracking-[0.2em] uppercase transition-all duration-300 w-full md:w-auto text-center flex items-center justify-center gap-2">
+                    <span class="iconify" data-icon="lucide:play-circle" width="16"></span>
+                    Ver Portafolio
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 w-full border-t border-white/10 bg-black/50 backdrop-blur-sm z-30">
+            <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+                <div class="text-[10px] text-neutral-500 font-mono">
+                    BOLIVIA — LATAM
+                </div>
+                <div class="hidden md:flex gap-6 text-[10px] text-neutral-500 font-mono">
+                    <span>WEB DEVELOPMENT</span>
+                    <span>•</span>
+                    <span>MOBILE APPS</span>
+                    <span>•</span>
+                    <span>SYSTEMS ENGINEERING</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 bg-black">
+
+        <section id="servicios" class="py-32 md:py-48 relative overflow-hidden group/section">
+            <div
+                class="absolute right-[-5%] top-40 text-[10rem] md:text-[15rem] font-black text-white z-0 pointer-events-none opacity-5 text-outline select-none">
+                MOBILE
+            </div>
+
+            <div class="md:flex md:justify-between md:items-center z-10 max-w-6xl mx-auto px-6 relative">
+                <div class="md:w-5/12 mb-12 md:mb-0 relative z-10">
+                    <span class="text-xs font-bold tracking-[0.3em] text-[#f1c500] block mb-4">ALCANCE MASIVO</span>
+                    <h3 class="text-4xl md:text-6xl font-black text-white uppercase leading-none mb-6">
+                        Apps que <br>Venden
+                    </h3>
+                    <p
+                        class="text-neutral-400 leading-relaxed font-serif text-lg mb-8 border-l-2 border-[#f1c500] pl-6">
+                        "Tu negocio en el bolsillo de tus clientes. No creamos aplicaciones simples; creamos canales de
+                        venta activos 24/7."
+                    </p>
+                    <ul class="space-y-4 font-mono text-xs text-neutral-500">
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#f1c500] iconify" data-icon="lucide:check"></span>
+                            iOS & Android Nativo (Flutter)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#f1c500] iconify" data-icon="lucide:check"></span>
+                            Integración de Pagos QR y Tarjetas
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#f1c500] iconify" data-icon="lucide:check"></span>
+                            Notificaciones Push Estratégicas
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:w-6/12 relative">
+                    <div
+                        class="relative w-full aspect-square md:aspect-[4/3] bg-neutral-900 border border-white/10 p-1 flex items-center justify-center overflow-hidden group/card hover:border-[#f1c500]/50 transition-colors duration-500">
+                        <div
+                            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-40 grayscale group-hover/card:scale-105 transition-transform duration-700">
+                        </div>
+                        <div
+                            class="relative z-10 bg-black/80 backdrop-blur-md p-8 border border-white/5 max-w-xs text-center group/techcard">
+                            <span class="iconify mx-auto mb-4 text-[#f1c500]" data-icon="lucide:smartphone"
+                                width="40"></span>
+
+                            <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-2">Experiencia Nativa
+                            </h4>
+                            <p class="text-neutral-500 text-xs leading-relaxed mb-6">
+                                Fluidez y rendimiento máximo para retener usuarios.
+                            </p>
+
+                            <div class="flex justify-center items-center gap-5 border-t border-white/10 pt-4">
+                                <div class="text-neutral-600 hover:text-[#f1c500] transition-colors duration-300"
+                                    title="Android">
+                                    <span class="iconify" data-icon="simple-icons:android" width="20"></span>
+                                </div>
+
+                                <div class="text-neutral-600 hover:text-[#f1c500] transition-colors duration-300"
+                                    title="iOS">
+                                    <span class="iconify" data-icon="simple-icons:apple" width="20"></span>
+                                </div>
+
+                                <div class="text-neutral-600 hover:text-[#f1c500] transition-colors duration-300"
+                                    title="Flutter">
+                                    <span class="iconify" data-icon="simple-icons:flutter" width="20"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 md:py-48 relative overflow-hidden group/section bg-neutral-950">
+            <div
+                class="absolute left-[-5%] top-40 text-[10rem] md:text-[15rem] font-black text-white z-0 pointer-events-none opacity-5 text-outline select-none">
+                SYSTEM
+            </div>
+
+            <div
+                class="md:flex md:justify-between md:items-center flex-row-reverse max-w-6xl mx-auto px-6 relative z-10">
+
+                <div class="md:w-5/12 mb-12 md:mb-0 md:pl-12">
+                    <span class="text-xs font-bold tracking-[0.3em] text-[#f1c500] block mb-4">ECOSISTEMAS
+                        DIGITALES</span>
+                    <h3 class="text-4xl md:text-6xl font-black text-white uppercase leading-none mb-6">
+                        Control <br>Total
+                    </h3>
+                    <p
+                        class="text-neutral-400 leading-relaxed font-serif text-lg mb-8 border-r-2 border-[#f1c500] pr-6 text-right">
+                        "Desde Landing Pages que capturan clientes hasta Software de Escritorio (WPF) que gestiona tu
+                        inventario. Unimos todo."
+                    </p>
+                    <div class="flex flex-col items-end gap-2 font-mono text-xs text-neutral-500">
+                        <span class="bg-neutral-900 px-3 py-1 border border-white/10">WPF / .NET / C#</span>
+                        <span class="bg-neutral-900 px-3 py-1 border border-white/10">GO / NEON DB</span>
+                        <span class="bg-neutral-900 px-3 py-1 border border-white/10">WEB / HTML5 / NEXT.JS</span>
+                    </div>
+                </div>
+
+                <div class="md:w-6/12">
+                    <div
+                        class="relative w-full aspect-square md:aspect-[4/3] bg-neutral-900 border border-white/10 overflow-hidden group/card">
+
+                        <img src="img/eco.jpg" alt="Infraestructura Digital" loading="lazy"
+                            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+
+                        <div
+                            class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30 pointer-events-none">
+                        </div>
+
+                        <div class="absolute bottom-8 left-8 right-8 z-10">
+                            <div class="bg-black/90 border border-white/10 p-6 backdrop-blur-xl">
+                                <h4 class="text-[#f1c500] font-mono text-xs uppercase mb-2">> System.Initialize()</h4>
+                                <p class="text-white text-sm font-bold">Desarrollo Full Stack</p>
+                                <p class="text-neutral-500 text-xs mt-2">Arquitectura escalable y bases de datos
+                                    optimizadas para alto tráfico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="py-32 relative overflow-hidden border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <span class="text-xs font-bold tracking-[0.3em] text-[#f1c500] block mb-2">PORTAFOLIO</span>
+                        <h3 class="text-4xl md:text-5xl font-black text-white uppercase">Casos de Éxito</h3>
+                    </div>
+                    <div class="hidden md:flex gap-2">
+                        <button onclick="document.getElementById('carousel').scrollBy({left: -400, behavior: 'smooth'})"
+                            class="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+                            <span class="iconify" data-icon="lucide:arrow-left"></span>
+                        </button>
+                        <button onclick="document.getElementById('carousel').scrollBy({left: 400, behavior: 'smooth'})"
+                            class="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-[#f1c500] hover:text-black hover:border-[#f1c500] transition-colors">
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="carousel" class="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-12">
+
+                    <a href="project-details.html?id=biblioverso"
+                        class="min-w-[85vw] md:min-w-[500px] snap-center group cursor-pointer block">
+                        <div class="relative aspect-[16/10] bg-neutral-900 border border-white/10 overflow-hidden mb-6">
+                            <img src="img/biblioverso3.png" loading="lazy" alt="Biblioverso System"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                                <span
+                                    class="px-6 py-3 bg-[#f1c500] text-black font-bold text-xs uppercase tracking-widest">Ver
+                                    Case Study</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 mb-4">
+                            <span
+                                class="px-2 py-1 border border-[#f1c500]/30 text-[#f1c500] text-[10px] uppercase font-bold tracking-wider">SaaS</span>
+                            <span
+                                class="px-2 py-1 border border-white/10 text-neutral-500 text-[10px] uppercase font-bold tracking-wider">WPF
+                                + .NET</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">Biblioverso</h4>
+                        <p class="text-sm text-neutral-400 max-w-sm leading-relaxed">
+                            Plataforma integral de gestión bibliotecaria. Optimización de inventarios y sistema de
+                            préstamos automatizado.
+                        </p>
+                    </a>
+
+                    <a href="project-details.html?id=puntoseguro"
+                        class="min-w-[85vw] md:min-w-[500px] snap-center group cursor-pointer block">
+                        <div class="relative aspect-[16/10] bg-neutral-900 border border-white/10 overflow-hidden mb-6">
+                            <img src="img/ps.jpg" loading="lazy" alt="Punto Seguro Web"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                                <span
+                                    class="px-6 py-3 bg-[#f1c500] text-black font-bold text-xs uppercase tracking-widest">Ver
+                                    Case Study</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 mb-4">
+                            <span
+                                class="px-2 py-1 border border-[#f1c500]/30 text-[#f1c500] text-[10px] uppercase font-bold tracking-wider">Logística</span>
+                            <span
+                                class="px-2 py-1 border border-white/10 text-neutral-500 text-[10px] uppercase font-bold tracking-wider">Landing
+                                Page</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">Punto Seguro</h4>
+                        <p class="text-sm text-neutral-400 max-w-sm leading-relaxed">
+                            Landing page de alta conversión para transporte privado. Integración directa con API de
+                            WhatsApp para reservas inmediatas.
+                        </p>
+                    </a>
+
+                    <a href="project-details.html?id=pos"
+                        class="min-w-[85vw] md:min-w-[500px] snap-center group cursor-pointer block">
+                        <div
+                            class="relative aspect-[16/10] bg-neutral-900 border border-white/10 overflow-hidden mb-6 flex flex-col items-center justify-center bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+                            <span class="iconify text-neutral-700 mb-4" data-icon="lucide:shopping-bag"
+                                width="48"></span>
+                            <span class="text-neutral-600 text-xs uppercase tracking-widest">Proyecto
+                                Confidencial</span>
+                        </div>
+                        <div class="flex gap-3 mb-4">
+                            <span
+                                class="px-2 py-1 border border-[#f1c500]/30 text-[#f1c500] text-[10px] uppercase font-bold tracking-wider">Retail</span>
+                            <span
+                                class="px-2 py-1 border border-white/10 text-neutral-500 text-[10px] uppercase font-bold tracking-wider">Go
+                                + NeonDB</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">POS Gastronómico</h4>
+                        <p class="text-sm text-neutral-400 max-w-sm leading-relaxed">
+                            Sistema de punto de venta adaptado al mercado boliviano. Facturación, control de stock y
+                            métodos de pago locales.
+                        </p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 relative bg-black border-t border-white/5">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-16 md:w-1/2">
+                    <span class="text-xs font-bold tracking-[0.3em] text-[#f1c500] uppercase">Transparencia</span>
+                    <h3 class="text-3xl md:text-4xl font-black text-white uppercase mt-4">Tu ruta hacia el éxito digital
+                    </h3>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-8 relative">
+                    <div
+                        class="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-gradient-to-r from-[#f1c500] to-neutral-900 z-0">
+                    </div>
+
+                    <div class="relative z-10 group">
+                        <div
+                            class="w-24 h-24 bg-black border border-[#f1c500] flex items-center justify-center text-3xl font-black text-white mb-6 shadow-[0_0_20px_rgba(241,197,0,0.2)] group-hover:scale-110 transition-transform">
+                            01</div>
+                        <h4 class="text-lg font-bold text-white mb-2">Discovery</h4>
+                        <p class="text-sm text-neutral-500">Analizamos tu negocio, no solo tu idea. Definimos objetivos
+                            de rentabilidad y alcance.</p>
+                    </div>
+
+                    <div class="relative z-10 group">
+                        <div
+                            class="w-24 h-24 bg-black border border-white/20 flex items-center justify-center text-3xl font-black text-neutral-500 mb-6 group-hover:border-[#f1c500] group-hover:text-white transition-colors">
+                            02</div>
+                        <h4 class="text-lg font-bold text-white mb-2">Ingeniería</h4>
+                        <p class="text-sm text-neutral-500">Diseño UI/UX y arquitectura de software sólida. Nada de
+                            plantillas baratas.</p>
+                    </div>
+
+                    <div class="relative z-10 group">
+                        <div
+                            class="w-24 h-24 bg-black border border-white/20 flex items-center justify-center text-3xl font-black text-neutral-500 mb-6 group-hover:border-[#f1c500] group-hover:text-white transition-colors">
+                            03</div>
+                        <h4 class="text-lg font-bold text-white mb-2">Desarrollo</h4>
+                        <p class="text-sm text-neutral-500">Codificación ágil con reportes semanales. Tú ves el progreso
+                            en tiempo real.</p>
+                    </div>
+
+                    <div class="relative z-10 group">
+                        <div
+                            class="w-24 h-24 bg-black border border-white/20 flex items-center justify-center text-3xl font-black text-neutral-500 mb-6 group-hover:border-[#f1c500] group-hover:text-white transition-colors">
+                            04</div>
+                        <h4 class="text-lg font-bold text-white mb-2">Lanzamiento</h4>
+                        <p class="text-sm text-neutral-500">Despliegue en servidores, pruebas de estrés y capacitación a
+                            tu personal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="py-32 bg-neutral-950 border-t border-white/5">
+            <div class="max-w-5xl mx-auto px-6 md:flex md:items-center md:justify-between">
+                <div class="md:w-5/12 mb-10 md:mb-0 text-right md:order-2">
+                    <span class="text-xs font-bold tracking-[0.3em] text-[#f1c500] block mb-2">RESPALDO TÉCNICO</span>
+                    <h3 class="text-4xl md:text-5xl font-black text-white uppercase leading-none">
+                        Ingeniería <br>Certificada
+                    </h3>
+                </div>
+
+                <div class="md:w-6/12 md:order-1">
+                    <div class="p-8 border-l-2 border-[#f1c500] bg-gradient-to-r from-neutral-900 to-transparent">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="iconify text-[#f1c500]" data-icon="lucide:graduation-cap" width="24"></span>
+                            <span class="text-[10px] font-mono text-white/50">UNIVALLE BOLIVIA</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Ingeniero de Sistemas</h4>
+                        <p class="text-sm text-neutral-400 leading-relaxed font-serif italic">
+                            "A diferencia de diseñadores que 'saben algo de código', nosotros somos ingenieros.
+                            Construimos software seguro, escalable y mantenible."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 relative overflow-hidden bg-neutral-900 border-t border-white/5">
+            <div class="max-w-6xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-bold tracking-[0.3em] text-[#f1c500] uppercase">Confianza</span>
+                    <h3 class="text-3xl md:text-4xl font-black text-white uppercase mt-4">Lo que dicen nuestros clientes
+                    </h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div
+                        class="p-8 bg-black border border-white/10 relative group hover:border-[#f1c500]/50 transition-colors">
+                        <div class="absolute -top-4 -left-4 text-6xl text-[#f1c500] opacity-20 font-serif">"</div>
+                        <p class="text-neutral-400 italic mb-6 leading-relaxed">
+                            "Necesitábamos modernizar la biblioteca urgentemente. Moya Digital no solo nos entregó el
+                            software, sino que nos ayudó a entender cómo optimizar nuestros procesos. La recuperación de
+                            libros aumentó un 30%."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center font-bold text-[#f1c500] text-xs">
+                                UP</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Director Académico</h4>
+                                <p class="text-xs text-neutral-500">Universidad Privada del Valle</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-8 bg-black border border-white/10 relative group hover:border-[#f1c500]/50 transition-colors">
+                        <div class="absolute -top-4 -left-4 text-6xl text-[#f1c500] opacity-20 font-serif">"</div>
+                        <p class="text-neutral-400 italic mb-6 leading-relaxed">
+                            "Implementar el sistema de reservas por WhatsApp fue la mejor inversión del año. Mis
+                            choferes ya no pierden tiempo coordinando por llamadas. Todo es automático y rápido."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center font-bold text-[#f1c500] text-xs">
+                                PS</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Gerente General</h4>
+                                <p class="text-xs text-neutral-500">Punto Seguro Transporte</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-24 bg-black border-t border-white/5">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-bold text-white uppercase tracking-widest">Preguntas Frecuentes</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div
+                        class="border border-white/10 p-6 bg-neutral-900/50 hover:border-[#f1c500]/30 transition-colors cursor-default">
+                        <h4 class="text-white font-bold mb-2 flex items-center gap-2">
+                            <span class="text-[#f1c500] text-lg">?</span>
+                            ¿Trabajan con facturación en Bolivia?
+                        </h4>
+                        <p class="text-sm text-neutral-400 pl-6">Sí, todos nuestros servicios incluyen factura fiscal
+                            válida en territorio nacional. Los precios mostrados en cotizaciones ya incluyen impuestos
+                            de ley.</p>
+                    </div>
+
+                    <div
+                        class="border border-white/10 p-6 bg-neutral-900/50 hover:border-[#f1c500]/30 transition-colors cursor-default">
+                        <h4 class="text-white font-bold mb-2 flex items-center gap-2">
+                            <span class="text-[#f1c500] text-lg">?</span>
+                            ¿Incluyen Hosting y Dominio?
+                        </h4>
+                        <p class="text-sm text-neutral-400 pl-6">En proyectos web, incluimos el primer año de
+                            configuración de servidor y dominio. Para apps móviles, gestionamos la subida a Google Play
+                            y App Store.</p>
+                    </div>
+
+                    <div
+                        class="border border-white/10 p-6 bg-neutral-900/50 hover:border-[#f1c500]/30 transition-colors cursor-default">
+                        <h4 class="text-white font-bold mb-2 flex items-center gap-2">
+                            <span class="text-[#f1c500] text-lg">?</span>
+                            ¿Dan soporte después de terminar?
+                        </h4>
+                        <p class="text-sm text-neutral-400 pl-6">Absolutamente. No abandonamos a nuestros clientes.
+                            Ofrecemos planes de mantenimiento mensual para asegurar que tu software siga funcionando
+                            perfectamente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="py-24 bg-black border-t border-white/10 relative overflow-hidden">
+        <div
+            class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row justify-between items-end">
+            <div class="mb-12 md:mb-0">
+                <h2 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8">
+                    ¿Hablamos de <br> Negocios?
+                </h2>
+                <a href="#" data-wa-action="footer"
+                    class="inline-flex items-center gap-3 px-8 py-4 bg-[#f1c500] text-black font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                    <span>Solicitar Cotización</span>
+                    <span class="iconify" data-icon="lucide:arrow-up-right"></span>
+                </a>
+            </div>
+
+            <div class="text-right">
+                <div class="flex justify-end gap-6 mb-6">
+                    <a href="#" class="text-neutral-500 hover:text-[#f1c500] transition-colors"><span class="iconify"
+                            data-icon="lucide:linkedin" width="24"></span></a>
+                    <a href="#" class="text-neutral-500 hover:text-[#f1c500] transition-colors"><span class="iconify"
+                            data-icon="lucide:instagram" width="24"></span></a>
+                    <a href="#" class="text-neutral-500 hover:text-[#f1c500] transition-colors"><span class="iconify"
+                            data-icon="lucide:github" width="24"></span></a>
+                    <a href="https://tiktok.com/@tusuario" target="_blank"
+                        class="text-neutral-500 hover:text-[#f1c500] transition-colors">
+                        <span class="iconify" data-icon="tabler:brand-tiktok" width="24"></span>
+                    </a>
+                    <a href="https://facebook.com/tupagina" target="_blank"
+                        class="text-neutral-500 hover:text-[#f1c500] transition-colors">
+                        <span class="iconify" data-icon="lucide:facebook" width="24"></span>
+                    </a>
+
+                </div>
+                <p class="text-xs text-neutral-500 uppercase tracking-widest mb-2">Softify Agency</p>
+                <p class="text-[10px] font-mono text-neutral-700">© 2026 SUCRE, BOLIVIA</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" data-wa-action="float-btn" target="_blank"
+        class="fixed bottom-8 right-8 z-50 bg-[#f1c500] hover:bg-white text-black p-4 rounded-full shadow-[0_0_20px_rgba(241,197,0,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transition-all duration-300 hover:scale-110 flex items-center justify-center group border border-black/20">
+
+        <span class="iconify w-8 h-8" data-icon="lucide:message-circle"></span>
+
+        <span
+            class="absolute right-full mr-4 bg-neutral-900 border border-white/10 text-[#f1c500] text-xs font-bold px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap tracking-widest uppercase">
+            Hablemos ahora
+        </span>
+    </a>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-white/50 hover:text-[#f1c500] transition-colors">
+            <span class="iconify" data-icon="lucide:x" width="40"></span>
+        </button>
+
+        <nav class="flex flex-col items-center gap-8 text-center">
+            <a href="#servicios" onclick="closeMenu()"
+                class="text-4xl font-black text-white uppercase tracking-widest hover:text-[#f1c500] transition-colors">Soluciones</a>
+            <a href="#proyectos" onclick="closeMenu()"
+                class="text-4xl font-black text-white uppercase tracking-widest hover:text-[#f1c500] transition-colors">Casos
+                de Éxito</a>
+            <a href="#experiencia" onclick="closeMenu()"
+                class="text-4xl font-black text-white uppercase tracking-widest hover:text-[#f1c500] transition-colors">La
+                Agencia</a>
+            <a href="#faq" onclick="closeMenu()"
+                class="text-4xl font-black text-white uppercase tracking-widest hover:text-[#f1c500] transition-colors">FAQ</a>
+            <a href="#" onclick="closeMenu()" data-wa-action="nav-cotizar"
+                class="mt-8 px-8 py-4 bg-[#f1c500] text-black font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                Cotizar
+            </a>
+        </nav>
+    </div>
+
+    <!-- Typewriter & Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Typewriter Logic
+            const line1Text = "Soluciones que";
+            const line2Text = "Generan Valor";
+
+            const line1El = document.getElementById('type-line-1');
+            const line2El = document.getElementById('type-line-2');
+            const cursor1 = document.getElementById('cursor-1');
+            const cursor2 = document.getElementById('cursor-2');
+
+            let i = 0;
+            let j = 0;
+
+            function typeLine1() {
+                if (i < line1Text.length) {
+                    line1El.textContent += line1Text.charAt(i);
+                    i++;
+                    setTimeout(typeLine1, 100);
+                } else {
+                    cursor1.classList.add('hidden');
+                    cursor2.classList.remove('hidden');
+                    setTimeout(typeLine2, 300);
+                }
+            }
+
+            function typeLine2() {
+                if (j < line2Text.length) {
+                    line2El.textContent += line2Text.charAt(j);
+                    j++;
+                    setTimeout(typeLine2, 100);
+                }
+            }
+
+            setTimeout(typeLine1, 500);
+
+            // Mobile Menu Logic
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const menuOverlay = document.getElementById('mobile-menu');
+
+            function openMenu() {
+                menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            }
+
+            window.closeMenu = function () {
+                menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+            }
+
+            menuBtn.addEventListener('click', openMenu);
+            closeBtn.addEventListener('click', closeMenu);
+        });
+    </script>
+</body>
+
+</html>

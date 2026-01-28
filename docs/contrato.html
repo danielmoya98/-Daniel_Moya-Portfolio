@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contrato de Servicios | Softify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Lora:ital,wght@0,400;1,400&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            -webkit-print-color-adjust: exact;
+        }
+
+        /* Serif para lectura cómoda */
+        h1,
+        h2,
+        h3,
+        .sans {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 2.5cm;
+        }
+
+        /* Fondo blanco para contrato legal es más estándar y ahorra tinta, pero con cabecera de marca */
+
+        /* Opcional: Si quieres contrato oscuro, cambia background-color a #000000 y color a #e5e5e5 */
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="page shadow-xl">
+
+        <div class="flex justify-between items-start border-b-2 border-black pb-8 mb-10">
+            <div>
+                <h1 class="text-2xl font-black uppercase tracking-tighter">Contrato de Servicios</h1>
+                <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Desarrollo de Software a
+                    Medida</p>
+            </div>
+            <div class="text-right">
+                <div class="font-black text-xl mb-1">SOFTIFY</div>
+                <p class="text-[10px] text-gray-500">REF: CON-[AÑO]-[NUMERO]</p>
+            </div>
+        </div>
+
+        <div class="text-sm leading-relaxed space-y-6 text-justify">
+
+            <p>
+                En la ciudad de Sucre, a los <span class="bg-yellow-100 px-2">[DÍA]</span> días del mes de <span
+                    class="bg-yellow-100 px-2">[MES]</span> de <span class="bg-yellow-100 px-2">[AÑO]</span>, suscriben
+                el presente contrato:
+            </p>
+
+            <div>
+                <h3 class="font-bold text-xs uppercase tracking-widest mb-2">1. Las Partes</h3>
+                <p>
+                    <strong>EL PROVEEDOR:</strong> Daniel Moya (Softify Agency), con domicilio legal en [TU DIRECCIÓN],
+                    Sucre, Bolivia.
+                    <br>
+                    <strong>EL CLIENTE:</strong> <span class="bg-yellow-100 px-2">[NOMBRE EMPRESA/CLIENTE]</span>,
+                    representado por [REPRESENTANTE], con domicilio en [DIRECCIÓN CLIENTE].
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-xs uppercase tracking-widest mb-2">2. Objeto del Contrato</h3>
+                <p>
+                    EL PROVEEDOR se compromete a diseñar, desarrollar e implementar el proyecto de software denominado
+                    <strong class="uppercase">[NOMBRE PROYECTO]</strong>, cuyas especificaciones técnicas y funcionales
+                    se detallan en el Anexo 1 (Propuesta Técnica).
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-xs uppercase tracking-widest mb-2">3. Costo y Forma de Pago</h3>
+                <p>
+                    El costo total del servicio es de <strong class="mono bg-gray-100 px-1">[MONTO TOTAL]
+                        [MONEDA]</strong>. El pago se realizará de la siguiente manera:
+                </p>
+                <ul class="list-disc pl-8 mt-2 space-y-1">
+                    <li><strong>50% Anticipo:</strong> A la firma del presente contrato.</li>
+                    <li><strong>50% Contra-Entrega:</strong> Al finalizar el desarrollo y aprobarse la puesta en marcha.
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-xs uppercase tracking-widest mb-2">4. Plazo de Ejecución</h3>
+                <p>
+                    El tiempo estimado de desarrollo es de <span class="bg-yellow-100 px-2">[XX]</span> días hábiles,
+                    contados a partir de la recepción del anticipo y de toda la información requerida (logos, textos,
+                    accesos) por parte de EL CLIENTE.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-xs uppercase tracking-widest mb-2">5. Propiedad Intelectual</h3>
+                <p>
+                    Al finalizar el pago total, EL PROVEEDOR cede a EL CLIENTE los derechos patrimoniales sobre el
+                    producto final. EL PROVEEDOR se reserva el derecho de exhibir el proyecto en su portafolio web y
+                    redes sociales como caso de éxito, salvo acuerdo de confidencialidad (NDA) firmado por separado.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-xs uppercase tracking-widest mb-2">6. Terminación Anticipada</h3>
+                <p>
+                    En caso de que EL CLIENTE decida cancelar el proyecto una vez iniciado, el anticipo del 50% no será
+                    reembolsable, cubriendo así las horas de ingeniería y recursos ya invertidos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="flex justify-between mt-24">
+            <div class="text-center w-5/12">
+                <div class="border-t border-black pt-4">
+                    <p class="font-bold uppercase text-xs">Softify Agency</p>
+                    <p class="text-[10px] text-gray-500">El Proveedor</p>
+                </div>
+            </div>
+            <div class="text-center w-5/12">
+                <div class="border-t border-black pt-4">
+                    <p class="font-bold uppercase text-xs">[NOMBRE CLIENTE]</p>
+                    <p class="text-[10px] text-gray-500">El Cliente</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

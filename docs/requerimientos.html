@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Discovery Matrix | Softify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background-color: #000000;
+            position: relative;
+            border-left: 10px solid #f1c500;
+        }
+
+        .checkbox {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #666;
+            display: inline-block;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .input-line {
+            border-bottom: 1px dashed #444;
+            width: 100%;
+            display: block;
+            height: 20px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page p-12 text-neutral-300 flex flex-col justify-between">
+
+        <div class="flex justify-between items-start mb-8 border-b border-white/10 pb-6">
+            <div>
+                <h1 class="text-3xl font-black text-white uppercase tracking-tighter">Project Discovery</h1>
+                <p class="text-xs font-mono text-[#f1c500] uppercase tracking-widest mt-1">Matriz de Requerimientos
+                    Funcionales</p>
+            </div>
+            <div class="text-right">
+                <div class="flex items-center gap-2 justify-end mb-1">
+                    <span class="font-bold text-white">SOFTIFY</span>
+                    <div class="w-4 h-4 bg-[#f1c500]"></div>
+                </div>
+                <p class="text-[9px] text-neutral-500">REF: REQ-2026</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8 mb-8">
+            <div>
+                <label class="text-[9px] uppercase text-[#f1c500] font-bold">Empresa / Stakeholder</label>
+                <div class="border-b border-white/30 h-8"></div>
+            </div>
+            <div>
+                <label class="text-[9px] uppercase text-[#f1c500] font-bold">Fecha de Reunión</label>
+                <div class="border-b border-white/30 h-8"></div>
+            </div>
+        </div>
+
+        <div class="bg-neutral-900/50 p-4 border border-white/10 mb-8">
+            <h3 class="text-white font-bold uppercase text-xs tracking-widest mb-2 flex items-center gap-2">
+                <span class="iconify text-[#f1c500]" data-icon="lucide:target"></span> Objetivo Principal
+            </h3>
+            <p class="text-[10px] text-neutral-500 italic mb-2">¿Qué problema de negocio estamos resolviendo? (Ej:
+                "Automatizar reservas", "Vender online")</p>
+            <div class="space-y-4">
+                <div class="input-line"></div>
+                <div class="input-line"></div>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-white font-bold uppercase text-xs tracking-widest mb-4 border-l-4 border-[#f1c500] pl-3">
+                Módulos & Funcionalidades</h3>
+            <p class="text-[9px] text-neutral-500 mb-4">Marque con una [ X ] las características deseadas para la
+                versión 1.0 (MVP).</p>
+
+            <div class="grid grid-cols-2 gap-6">
+
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-[10px] font-mono text-white bg-white/10 px-2 py-1 mb-2">1. GESTIÓN DE USUARIOS
+                        </h4>
+                        <div class="space-y-2 text-xs text-neutral-400">
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Login / Registro (Email)
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Login Social (Google/Facebook)
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Perfiles de Usuario (Foto, Datos)
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Roles (Admin, Editor, Cliente)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-[10px] font-mono text-white bg-white/10 px-2 py-1 mb-2">2. E-COMMERCE / PAGOS
+                        </h4>
+                        <div class="space-y-2 text-xs text-neutral-400">
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Catálogo de Productos
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Carrito de Compras
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Pasarela de Pagos (QR/Tarjeta)
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Facturación Automática
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-[10px] font-mono text-white bg-white/10 px-2 py-1 mb-2">3. COMUNICACIÓN</h4>
+                        <div class="space-y-2 text-xs text-neutral-400">
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Chat en Tiempo Real
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Integración WhatsApp API
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Notificaciones Push (Móvil)
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Correos Automáticos (Email Marketing)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-[10px] font-mono text-white bg-white/10 px-2 py-1 mb-2">4. ADMINISTRACIÓN
+                            (DASHBOARD)</h4>
+                        <div class="space-y-2 text-xs text-neutral-400">
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Gráficas y Reportes (Analytics)
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Gestión de Inventario/Stock
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Exportación de Datos (Excel/PDF)
+                            </div>
+                            <div class="flex items-center">
+                                <div class="checkbox"></div> Auditoría (Logs de actividad)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8 mb-8 border-t border-white/10 pt-6">
+            <div>
+                <h3 class="text-white font-bold uppercase text-xs tracking-widest mb-3">Plataformas</h3>
+                <div class="space-y-2 text-xs text-neutral-400">
+                    <div class="flex items-center">
+                        <div class="checkbox"></div> Web App (Navegador)
+                    </div>
+                    <div class="flex items-center">
+                        <div class="checkbox"></div> App Móvil (Android .APK)
+                    </div>
+                    <div class="flex items-center">
+                        <div class="checkbox"></div> App Móvil (iOS - App Store)
+                    </div>
+                    <div class="flex items-center">
+                        <div class="checkbox"></div> Software Escritorio (Windows/Mac)
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold uppercase text-xs tracking-widest mb-3">Estilo Visual</h3>
+                <div class="flex gap-4">
+                    <div
+                        class="border border-white/20 p-2 text-center w-20 h-20 flex flex-col items-center justify-center">
+                        <div class="w-full h-full bg-white mb-1"></div>
+                        <span class="text-[9px] uppercase">Minimal</span>
+                    </div>
+                    <div
+                        class="border border-white/20 p-2 text-center w-20 h-20 flex flex-col items-center justify-center bg-black">
+                        <div class="w-full h-full border border-gray-600 mb-1"></div>
+                        <span class="text-[9px] uppercase text-white">Dark Mode</span>
+                    </div>
+                    <div
+                        class="border border-white/20 p-2 text-center w-20 h-20 flex flex-col items-center justify-center">
+                        <div class="w-full h-full bg-blue-500 mb-1"></div>
+                        <span class="text-[9px] uppercase">Corp.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#171717] p-4 flex justify-between items-center border border-white/5">
+            <div class="w-1/3">
+                <label class="text-[9px] uppercase text-[#f1c500] font-bold block mb-1">Presupuesto Estimado</label>
+                <div class="border-b border-white/30 h-6 w-3/4"></div>
+            </div>
+            <div class="w-1/3">
+                <label class="text-[9px] uppercase text-[#f1c500] font-bold block mb-1">Fecha Límite (Deadline)</label>
+                <div class="border-b border-white/30 h-6 w-3/4"></div>
+            </div>
+            <div class="w-1/3 text-right">
+                <p class="text-[8px] text-neutral-500">Firma de conformidad para cotizar</p>
+                <div class="h-8 border-b border-dashed border-white/30 mt-2"></div>
+            </div>
+        </div>
+
+        <div class="text-center text-[9px] text-neutral-600 font-mono mt-4">
+            SOFTIFY ENGINEERING SYSTEMS - CONFIDENTIAL DOCUMENT
+        </div>
+    </div>
+</body>
+
+</html>

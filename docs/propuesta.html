@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Propuesta Comercial | Softify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Lora:ital,wght@1,400&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background-color: #000000;
+            position: relative;
+        }
+
+        .bg-grid {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid"></div>
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#f1c500] opacity-10 blur-[150px] rounded-full"></div>
+
+        <div class="p-12 relative z-10">
+            <div class="flex justify-between items-center mb-24">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-[#f1c500] text-black flex items-center justify-center font-black text-xl">S
+                    </div>
+                    <span class="text-white font-bold tracking-[0.2em]">SOFTIFY</span>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] text-neutral-500 uppercase tracking-widest">Fecha</p>
+                    <p class="text-white font-mono text-sm">26 ENE 2026</p>
+                </div>
+            </div>
+
+            <h1 class="text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8">
+                Propuesta <br> <span class="text-[#f1c500]">Digital</span>
+            </h1>
+
+            <div class="border-l-2 border-white/20 pl-6 max-w-lg">
+                <p class="text-xs text-[#f1c500] uppercase tracking-widest mb-2">Preparado para:</p>
+                <h2 class="text-2xl text-white font-bold uppercase mb-1">[NOMBRE DEL CLIENTE]</h2>
+                <p class="text-neutral-400 text-sm font-serif italic">"Transformación digital para optimizar procesos y
+                    aumentar ventas."</p>
+            </div>
+        </div>
+
+        <div class="flex-grow flex items-center justify-center relative z-10">
+            <div
+                class="w-full h-32 bg-gradient-to-r from-transparent via-[#f1c500]/20 to-transparent flex items-center justify-center">
+                <div class="text-[10px] font-mono text-[#f1c500] tracking-[1em] uppercase">Architecture & Development
+                </div>
+            </div>
+        </div>
+
+        <div class="p-12 border-t border-white/10 flex justify-between items-end relative z-10 bg-black">
+            <div>
+                <p class="text-[10px] text-neutral-500 uppercase">Validez de la oferta</p>
+                <p class="text-white font-bold text-sm">15 Días Hábiles</p>
+            </div>
+            <div class="text-right">
+                <p class="text-[10px] text-neutral-500 uppercase">Autor</p>
+                <p class="text-white font-bold text-sm">Daniel Moya</p>
+                <p class="text-[9px] text-neutral-600">Lead Software Engineer</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page p-12 bg-neutral-900 text-neutral-300 flex flex-col">
+
+        <div class="flex justify-between items-center border-b border-white/10 pb-6 mb-8">
+            <h3 class="text-white font-bold uppercase text-xs tracking-widest">Alcance del Proyecto</h3>
+            <span class="text-[10px] font-mono text-[#f1c500]">02 / 02</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-12 mb-12">
+            <div>
+                <h4 class="text-[#f1c500] font-bold text-xs uppercase mb-2">01. El Objetivo</h4>
+                <p class="text-xs leading-relaxed text-neutral-400">
+                    El cliente requiere una solución tecnológica para [DESCRIBIR PROBLEMA: ej: automatizar reservas,
+                    vender en línea, controlar stock]. El sistema actual manual genera pérdidas de tiempo y errores
+                    humanos.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-[#f1c500] font-bold text-xs uppercase mb-2">02. La Solución</h4>
+                <p class="text-xs leading-relaxed text-neutral-400">
+                    Desarrollo de una Plataforma Web Progresiva (PWA) optimizada para móviles, con panel de
+                    administración en tiempo real y conexión a base de datos segura. Incluye integración con WhatsApp
+                    API.
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <h3 class="text-white font-black text-2xl uppercase mb-6">Inversión Estimada</h3>
+
+            <div class="border border-white/10 bg-black">
+                <div class="grid grid-cols-12 border-b border-white/10 p-4 items-center">
+                    <div class="col-span-1 text-[#f1c500] font-mono text-xs">01</div>
+                    <div class="col-span-8">
+                        <h5 class="text-white font-bold text-sm">Diseño UX/UI & Prototipado</h5>
+                        <p class="text-[10px] text-neutral-500">Investigación, wireframes y diseño de alta fidelidad
+                            (Figma).</p>
+                    </div>
+                    <div class="col-span-3 text-right text-white font-mono text-sm">$XXX.00</div>
+                </div>
+
+                <div class="grid grid-cols-12 border-b border-white/10 p-4 items-center">
+                    <div class="col-span-1 text-[#f1c500] font-mono text-xs">02</div>
+                    <div class="col-span-8">
+                        <h5 class="text-white font-bold text-sm">Desarrollo Frontend & Backend</h5>
+                        <p class="text-[10px] text-neutral-500">Programación en React/HTML5 + API Go/Node.js + Base de
+                            Datos.</p>
+                    </div>
+                    <div class="col-span-3 text-right text-white font-mono text-sm">$XXX.00</div>
+                </div>
+
+                <div class="grid grid-cols-12 border-b border-white/10 p-4 items-center">
+                    <div class="col-span-1 text-[#f1c500] font-mono text-xs">03</div>
+                    <div class="col-span-8">
+                        <h5 class="text-white font-bold text-sm">Despliegue & Testing</h5>
+                        <p class="text-[10px] text-neutral-500">Configuración de servidor, dominio SSL y pruebas de
+                            estrés.</p>
+                    </div>
+                    <div class="col-span-3 text-right text-white font-mono text-sm">$XXX.00</div>
+                </div>
+
+                <div class="grid grid-cols-12 p-6 bg-[#171717]">
+                    <div
+                        class="col-span-9 text-right pr-4 uppercase text-xs font-bold text-neutral-400 tracking-widest pt-1">
+                        Total Proyecto</div>
+                    <div class="col-span-3 text-right text-[#f1c500] font-black text-xl">$X,XXX.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-white font-bold text-xs uppercase mb-4">Cronograma de Entrega</h3>
+            <div
+                class="flex justify-between items-center text-[10px] font-mono text-neutral-500 border-t border-white/10 pt-2">
+                <div>SEMANA 1: DISEÑO</div>
+                <div>SEMANA 2: DESARROLLO</div>
+                <div>SEMANA 3: INTEGRACIÓN</div>
+                <div>SEMANA 4: ENTREGA</div>
+            </div>
+            <div class="w-full h-1 bg-neutral-800 mt-2 rounded-full overflow-hidden">
+                <div class="w-1/4 h-full bg-[#f1c500]"></div>
+            </div>
+        </div>
+
+        <div class="mt-auto pt-6 border-t border-white/10 flex justify-between items-center">
+            <div class="text-[10px] text-neutral-500">
+                Esta cotización no incluye IVA. <br> Forma de pago: 50% Anticipo / 50% Entrega.
+            </div>
+            <a href="#" class="bg-[#f1c500] text-black px-6 py-2 text-xs font-bold uppercase tracking-widest">Aprobar
+                Presupuesto</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

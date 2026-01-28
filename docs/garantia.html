@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Certificado de Garantía | Softify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Lora:ital,wght@1,400&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        /* Formato Horizontal para que parezca diploma */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page {
+            width: 297mm;
+            min-height: 210mm;
+            margin: 0 auto;
+            background-color: #000000;
+            position: relative;
+            border: 10px solid #171717;
+        }
+
+        .border-gold {
+            border: 1px solid #f1c500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page p-16 flex flex-col justify-center text-center relative">
+
+        <div class="absolute inset-4 border border-[#f1c500] opacity-30 pointer-events-none"></div>
+        <div class="absolute inset-5 border border-white/10 pointer-events-none"></div>
+
+        <div class="mb-8">
+            <div
+                class="w-16 h-16 bg-[#f1c500] text-black flex items-center justify-center font-black text-3xl mx-auto mb-6 rounded-full shadow-[0_0_30px_rgba(241,197,0,0.3)]">
+                S</div>
+            <h1 class="text-5xl font-serif italic text-white mb-2">Certificado de Garantía</h1>
+            <p class="text-sm font-mono text-[#f1c500] uppercase tracking-[0.3em]">Software Quality Assurance</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-6 mb-12">
+            <p class="text-neutral-300 leading-relaxed font-light">
+                Por medio del presente documento, <strong>Softify Agency</strong> certifica que el producto de software
+                entregado a <strong class="text-white uppercase">[NOMBRE DEL CLIENTE]</strong> ha superado
+                satisfactoriamente las pruebas de calidad, rendimiento y seguridad.
+            </p>
+
+            <div
+                class="grid grid-cols-2 gap-8 text-left bg-neutral-900/50 p-6 border border-white/10 mx-auto max-w-2xl">
+                <div>
+                    <h4 class="text-[10px] uppercase text-[#f1c500] tracking-widest mb-1">Periodo de Cobertura</h4>
+                    <p class="text-white font-bold">30 Días Calendario</p>
+                    <p class="text-[9px] text-neutral-500">Desde: [FECHA INICIO] - Hasta: [FECHA FIN]</p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] uppercase text-[#f1c500] tracking-widest mb-1">Nivel de Soporte</h4>
+                    <p class="text-white font-bold">Tier 1 - Prioritario</p>
+                    <p class="text-[9px] text-neutral-500">Respuesta en < 24 horas</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-12 text-left max-w-4xl mx-auto text-[10px] text-neutral-500 leading-relaxed">
+            <div>
+                <h5 class="text-white font-bold uppercase mb-2 border-b border-white/10 pb-1">Cobertura Incluida</h5>
+                <ul class="list-disc pl-4 space-y-1">
+                    <li>Corrección de "Bugs" o errores de lógica en el código entregado.</li>
+                    <li>Restauración del servicio en caso de caída del servidor (si fue configurado por nosotros).</li>
+                    <li>Asesoría técnica sobre el uso de las funciones existentes.</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold uppercase mb-2 border-b border-white/10 pb-1">Exclusiones</h5>
+                <ul class="list-disc pl-4 space-y-1">
+                    <li>Errores causados por manipulación del código por terceros.</li>
+                    <li>Incompatibilidad por actualizaciones futuras de navegadores o sistemas operativos
+                        (post-entrega).</li>
+                    <li>Solicitudes de nuevas funcionalidades o cambios de diseño.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 right-16">
+            <div class="relative">
+                <img src="img/sello-garantia.png" class="w-24 h-24 opacity-80" alt="Sello Softify">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[8px] font-black text-black -rotate-12 uppercase text-center leading-tight">
+                    Approved<br>Build v1.0
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-16 text-left">
+            <div class="h-12 border-b border-white/30 w-48 mb-2"></div>
+            <p class="text-xs text-white uppercase font-bold">Daniel Moya</p>
+            <p class="text-[9px] text-neutral-500 uppercase">Lead Engineer</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

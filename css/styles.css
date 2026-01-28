@@ -1,0 +1,161 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+.font-serif {
+    font-family: 'Lora', serif;
+}
+
+/* Smooth transitions */
+.memory-transition {
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Grain & Noise */
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.07'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Typography outlines for the 'FREEGAME' style effect */
+.text-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    color: transparent;
+}
+
+/* Hero Text Animation */
+@keyframes revealUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-reveal {
+    animation: revealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Font Utilities */
+.font-geist {
+    font-family: 'Geist', sans-serif !important;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', serif !important;
+}
+
+.font-instrument-serif {
+    font-family: 'Instrument Serif', serif !important;
+}
+
+.font-merriweather {
+    font-family: 'Merriweather', serif !important;
+}
+
+.font-bricolage {
+    font-family: 'Bricolage Grotesque', sans-serif !important;
+}
+
+.font-jakarta {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.font-manrope {
+    font-family: 'Manrope', sans-serif !important;
+}
+
+.font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.font-work-sans {
+    font-family: 'Work Sans', sans-serif !important;
+}
+
+.font-pt-serif {
+    font-family: 'PT Serif', serif !important;
+}
+
+.font-geist-mono {
+    font-family: 'Geist Mono', monospace !important;
+}
+
+.font-space-mono {
+    font-family: 'Space Mono', monospace !important;
+}
+
+.font-quicksand {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.font-nunito {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.font-newsreader {
+    font-family: 'Newsreader', serif !important;
+}
+
+.font-google-sans-flex {
+    font-family: 'Google Sans Flex', sans-serif !important;
+}
+
+.font-oswald {
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.font-dm-sans {
+    font-family: 'DM Sans', sans-serif !important;
+}

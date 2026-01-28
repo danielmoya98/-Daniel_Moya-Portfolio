@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plan de Mantenimiento | Softify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background-color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page p-12 text-neutral-300 flex flex-col justify-between">
+
+        <div>
+            <div class="flex justify-between items-start mb-12">
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 bg-[#f1c500]"></div>
+                    <span class="font-bold text-white tracking-widest">SOFTIFY</span>
+                </div>
+                <span class="text-[10px] font-mono border border-white/20 px-2 py-1 text-neutral-400">PROPUESTA
+                    2026</span>
+            </div>
+
+            <h1 class="text-5xl font-black text-white uppercase tracking-tighter leading-none mb-6">
+                Protege tu <br> <span class="text-[#f1c500]">Inversión</span>
+            </h1>
+            <p class="text-sm text-neutral-400 max-w-md leading-relaxed mb-12">
+                El software es como un auto: necesita mantenimiento para no detenerse. Asegura la continuidad de tu
+                negocio con nuestros planes de soporte prioritario.
+            </p>
+
+            <div class="grid grid-cols-2 gap-6">
+
+                <div class="border border-white/10 p-6 bg-neutral-900/50">
+                    <h3 class="text-white font-bold uppercase tracking-widest mb-2">Essential</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Para mantener lo básico funcionando.</p>
+                    <div class="text-3xl font-black text-white mb-6">$50 <span
+                            class="text-sm font-normal text-neutral-500">/mes</span></div>
+
+                    <ul class="space-y-3 text-xs text-neutral-400 mb-8">
+                        <li class="flex gap-2"><span class="iconify text-neutral-600" data-icon="lucide:check"></span>
+                            Monitoreo 24/7 (Uptime)</li>
+                        <li class="flex gap-2"><span class="iconify text-neutral-600" data-icon="lucide:check"></span>
+                            Backups Semanales</li>
+                        <li class="flex gap-2"><span class="iconify text-neutral-600" data-icon="lucide:check"></span>
+                            Actualizaciones de Seguridad</li>
+                    </ul>
+
+                    <a href="#"
+                        class="block text-center py-2 border border-white/20 text-white text-[10px] uppercase font-bold hover:bg-white hover:text-black">Seleccionar</a>
+                </div>
+
+                <div class="border border-[#f1c500] p-6 bg-neutral-900 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 bg-[#f1c500] text-black text-[9px] font-bold px-3 py-1 uppercase">
+                        Recomendado</div>
+
+                    <h3 class="text-white font-bold uppercase tracking-widest mb-2 text-[#f1c500]">Growth</h3>
+                    <p class="text-xs text-neutral-500 mb-6">Soporte total y mejoras continuas.</p>
+                    <div class="text-3xl font-black text-white mb-6">$120 <span
+                            class="text-sm font-normal text-neutral-500">/mes</span></div>
+
+                    <ul class="space-y-3 text-xs text-neutral-300 mb-8">
+                        <li class="flex gap-2"><span class="iconify text-[#f1c500]" data-icon="lucide:check"></span>
+                            <strong>Backups Diarios</strong>
+                        </li>
+                        <li class="flex gap-2"><span class="iconify text-[#f1c500]" data-icon="lucide:check"></span>
+                            Soporte WhatsApp Prioritario</li>
+                        <li class="flex gap-2"><span class="iconify text-[#f1c500]" data-icon="lucide:check"></span>
+                            <strong>3 Horas</strong> de cambios mensuales
+                        </li>
+                        <li class="flex gap-2"><span class="iconify text-[#f1c500]" data-icon="lucide:check"></span>
+                            Reporte Mensual de Tráfico</li>
+                    </ul>
+
+                    <a href="#"
+                        class="block text-center py-2 bg-[#f1c500] text-black text-[10px] uppercase font-bold">Seleccionar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-8 mt-8">
+            <h4 class="text-xs font-bold text-white uppercase mb-4">¿Por qué contratarlo?</h4>
+            <div class="grid grid-cols-3 gap-6">
+                <div>
+                    <h5 class="text-[10px] text-[#f1c500] font-bold uppercase mb-1">Sin Caídas</h5>
+                    <p class="text-[9px] text-neutral-500">Si tu servidor falla un domingo, nosotros lo arreglamos sin
+                        que tengas que llamarnos.</p>
+                </div>
+                <div>
+                    <h5 class="text-[10px] text-[#f1c500] font-bold uppercase mb-1">Seguridad</h5>
+                    <p class="text-[9px] text-neutral-500">Los hackers no descansan. Mantenemos tus firewalls y
+                        librerías actualizados.</p>
+                </div>
+                <div>
+                    <h5 class="text-[10px] text-[#f1c500] font-bold uppercase mb-1">Evolución</h5>
+                    <p class="text-[9px] text-neutral-500">Pequeños cambios de texto o fotos están incluidos en el plan
+                        Growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
