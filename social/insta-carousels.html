@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plan de Contenido Semana 1 | Softify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .font-mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* Cajas de Contenido */
+        .content-box {
+            background: #111;
+            border: 1px solid #333;
+            padding: 24px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #f1c500;
+        }
+
+        /* Etiquetas */
+        .tag {
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Space Mono', monospace;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .tag-carousel {
+            background: #f1c500;
+            color: black;
+        }
+
+        .tag-post {
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        .tag-reel {
+            background: #e11d48;
+            color: white;
+        }
+
+        /* Visual Placeholder Guide */
+        .visual-guide {
+            background: #000;
+            border: 1px dashed #555;
+            padding: 16px;
+            margin-top: 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .asset-box {
+            width: 60px;
+            height: 60px;
+            background: #222;
+            border: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            border-radius: 6px;
+        }
+
+        /* Script Reel */
+        .script-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 16px;
+            border-bottom: 1px solid #222;
+            padding: 12px 0;
+        }
+
+        .time-code {
+            color: #f1c500;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="mb-12 border-b border-white/10 pb-8">
+        <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-8 bg-[#f1c500] text-black flex items-center justify-center font-black text-sm">S</div>
+            <span class="tracking-widest text-xs font-bold text-neutral-500">PRODUCTION SHEET // WEEK 01</span>
+        </div>
+        <h1 class="text-4xl font-black text-white uppercase">Plan de Lanzamiento: <span
+                class="text-[#f1c500]">Autoridad</span></h1>
+    </header>
+
+    <h2 class="text-xl font-bold text-[#f1c500] mb-6 uppercase tracking-widest border-b border-white/10 pb-2">01.
+        Carruseles (Slide by Slide)</h2>
+
+    <div class="content-box">
+        <div class="flex justify-between items-start mb-4">
+            <div>
+                <span class="tag tag-carousel">Carrusel 01</span>
+                <h3 class="text-xl font-bold text-white mt-2">Tema: La Trampa del Excel</h3>
+            </div>
+            <span class="text-xs text-neutral-500 font-mono">LUNES</span>
+        </div>
+
+        <div class="space-y-4">
+            <div class="bg-neutral-900 p-4 rounded border border-white/5">
+                <p class="text-[#f1c500] text-xs font-bold mb-1">SLIDE 1 (PORTADA)</p>
+                <p class="text-white font-bold text-lg">TU EXCEL TE ESTÁ <br> <span class="text-red-500">ROBANDO</span>
+                    DINERO.</p>
+                <div class="visual-guide">
+                    <div class="asset-box">👨‍🏫</div>
+                    <div class="text-xs text-neutral-400">
+                        <strong>Visual:</strong> Fondo negro + Grilla. <br>
+                        <strong>Robot:</strong> <code>img/robot-teach.png</code> (Señalando el título).
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900 p-4 rounded border border-white/5">
+                <p class="text-[#f1c500] text-xs font-bold mb-1">SLIDE 2 (AGITACIÓN)</p>
+                <p class="text-white text-sm">EL PROBLEMA:</p>
+                <ul class="text-xs text-neutral-300 list-disc ml-4 mt-2">
+                    <li>Datos duplicados.</li>
+                    <li>Horas conciliando stock.</li>
+                    <li>Sin reportes en tiempo real.</li>
+                </ul>
+                <div class="visual-guide">
+                    <div class="asset-box">🔌</div>
+                    <div class="text-xs text-neutral-400">
+                        <strong>Visual:</strong> Fondo rojo oscuro tenue. <br>
+                        <strong>Robot:</strong> <code>img/robot-zen.png</code> (Con letrero de "System Error").
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900 p-4 rounded border border-white/5">
+                <p class="text-[#f1c500] text-xs font-bold mb-1">SLIDE 3 (SOLUCIÓN)</p>
+                <p class="text-white text-sm">HAY UNA MEJOR FORMA.</p>
+                <p class="text-xs text-neutral-300 mt-2">Conoce Softify Dashboard. Tu negocio en piloto automático.</p>
+                <div class="visual-guide">
+                    <div class="asset-box">🎉</div>
+                    <div class="text-xs text-neutral-400">
+                        <strong>Visual:</strong> Captura de pantalla de tu Dashboard con Glow dorado. <br>
+                        <strong>Robot:</strong> <code>img/robot-win.png</code> (Celebrando).
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900 p-4 rounded border border-white/5">
+                <p class="text-[#f1c500] text-xs font-bold mb-1">SLIDE 4 (CIERRE)</p>
+                <p class="text-white text-lg font-bold text-center">¿LISTO PARA ESCALAR?</p>
+                <p class="text-xs text-neutral-300 text-center mt-2">Comenta "SISTEMA" para una demo.</p>
+                <div class="visual-guide">
+                    <div class="asset-box">👉</div>
+                    <div class="text-xs text-neutral-400">
+                        <strong>Visual:</strong> Fondo dorado. Texto negro. <br>
+                        <strong>Robot:</strong> <code>img/robot-teach.png</code> (Grande, centrado).
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="mt-6 p-4 bg-black border border-dashed border-neutral-700 rounded text-xs font-mono text-neutral-400">
+            <strong>COPY (CAPTION):</strong><br><br>
+            El 80% de las PYMEs en Bolivia siguen usando Excel como base de datos. 📉<br><br>
+            El resultado: Errores humanos, stock perdido y decisiones basadas en intuición, no en datos.<br><br>
+            En Softify, diseñamos sistemas a medida que automatizan lo aburrido para que tú te enfoques en
+            vender.<br><br>
+            👇 Comenta <strong>SISTEMA</strong> y te enviamos un video de cómo funciona.<br><br>
+            #Softify #SoftwareBolivia #Automatizacion #NegociosDigitales
+        </div>
+    </div>
+
+
+    <h2 class="text-xl font-bold text-[#f1c500] mb-6 uppercase tracking-widest border-b border-white/10 pb-2 mt-12">02.
+        Single Posts (Impacto Rápido)</h2>
+
+    <div class="content-box">
+        <div class="flex justify-between items-start mb-4">
+            <div>
+                <span class="tag tag-post">Post 01</span>
+                <h3 class="text-xl font-bold text-white mt-2">Tema: Notification / Social Proof</h3>
+            </div>
+            <span class="text-xs text-neutral-500 font-mono">VIERNES</span>
+        </div>
+
+        <div class="visual-guide">
+            <div class="asset-box">🔔</div>
+            <div class="text-xs text-neutral-400">
+                <strong>Diseño:</strong> Estilo notificación de iOS sobre fondo oscuro. "Nueva Venta: $1,250.00 -
+                Procesado Automáticamente". <br>
+                <strong>Robot:</strong> <code>img/robot-win.png</code> (Asomado en la esquina inferior).
+            </div>
+        </div>
+
+        <div
+            class="mt-6 p-4 bg-black border border-dashed border-neutral-700 rounded text-xs font-mono text-neutral-400">
+            <strong>COPY (CAPTION):</strong><br><br>
+            No hay mejor notificación que una venta cerrada mientras duermes. 🌙💸<br><br>
+            Esto no es magia, es Ingeniería de Software. Creamos ecosistemas que venden 24/7.<br><br>
+            ¿Tu negocio trabaja por ti o tú trabajas para tu negocio?<br><br>
+            #IngresosPasivos #TechBolivia #SaaS #SoftifyAgency
+        </div>
+    </div>
+
+
+    <h2 class="text-xl font-bold text-[#f1c500] mb-6 uppercase tracking-widest border-b border-white/10 pb-2 mt-12">03.
+        Reels (Guiones Técnicos)</h2>
+
+    <div class="content-box">
+        <div class="flex justify-between items-start mb-4">
+            <div>
+                <span class="tag tag-reel">Reel 01</span>
+                <h3 class="text-xl font-bold text-white mt-2">Concepto: Client vs. Engineer</h3>
+            </div>
+            <span class="text-xs text-neutral-500 font-mono">MIÉRCOLES</span>
+        </div>
+
+        <div class="mb-4">
+            <p class="text-xs text-[#f1c500] font-bold uppercase">🎵 Audio Sugerido:</p>
+            <p class="text-xs text-white">"Metamorphosis" (Phonk) o "Business Techno" (Instrumental oscuro).</p>
+        </div>
+
+        <div class="bg-black p-4 rounded border border-white/5">
+            <div class="script-row">
+                <div class="time-code">0:00-0:02</div>
+                <div>
+                    <p class="text-white text-sm font-bold">GANCHO VISUAL</p>
+                    <p class="text-xs text-neutral-400">Plano de código complejo (GoLang/Matrix style) en monitor. Texto
+                        grande en pantalla: <strong>"LO QUE EL CLIENTE VE"</strong></p>
+                </div>
+            </div>
+            <div class="script-row">
+                <div class="time-code">0:02-0:04</div>
+                <div>
+                    <p class="text-white text-sm font-bold">TRANSICIÓN</p>
+                    <p class="text-xs text-neutral-400">Corte rápido al Dashboard terminado (UI limpia y dorada). Texto:
+                        <strong>"LO QUE CONSTRUIMOS"</strong></p>
+                </div>
+            </div>
+            <div class="script-row">
+                <div class="time-code">0:04-0:08</div>
+                <div>
+                    <p class="text-white text-sm font-bold">CIERRE / CTA</p>
+                    <p class="text-xs text-neutral-400">Tú cerrando la laptop con satisfacción. Tomas tu café. Texto
+                        final: <strong>"Ingeniería Real. Link en Bio."</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 p-4 bg-neutral-900 rounded text-xs font-mono text-neutral-400">
+            <strong>CAPTION:</strong><br>
+            Detrás de cada botón simple, hay miles de líneas de código complejo. 🖥️⚡ No busques diseñadores, busca
+            ingenieros. #DevLife #Coding #Softify
+        </div>
+    </div>
+
+    <div class="content-box">
+        <div class="flex justify-between items-start mb-4">
+            <div>
+                <span class="tag tag-reel">Reel 02</span>
+                <h3 class="text-xl font-bold text-white mt-2">Concepto: The Hard Truth (ASMR)</h3>
+            </div>
+            <span class="text-xs text-neutral-500 font-mono">EXTRA</span>
+        </div>
+
+        <div class="mb-4">
+            <p class="text-xs text-[#f1c500] font-bold uppercase">🎵 Audio Sugerido:</p>
+            <p class="text-xs text-white">Solo sonido de teclado mecánico (ASMR) + Voz en off profunda (AI).</p>
+        </div>
+
+        <div class="bg-black p-4 rounded border border-white/5">
+            <div class="script-row">
+                <div class="time-code">0:00-0:05</div>
+                <div>
+                    <p class="text-white text-sm font-bold">ESCENA ÚNICA</p>
+                    <p class="text-xs text-neutral-400">Cámara fija grabando tus manos tecleando rápido. Iluminación
+                        tenue.</p>
+                    <p class="text-xs text-[#f1c500] mt-1">VOZ OFF: "El software barato sale caro. Si tu sistema falla
+                        un viernes por la noche, ¿quién te responde? Un freelancer duerme. Una agencia responde."</p>
+                </div>
+            </div>
+            <div class="script-row">
+                <div class="time-code">0:05-0:07</div>
+                <div>
+                    <p class="text-white text-sm font-bold">CIERRE</p>
+                    <p class="text-xs text-neutral-400">Aparece el logo de SOFTIFY animado en la pantalla.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-12 text-center text-xs text-neutral-600 font-mono border-t border-white/5 pt-8">
+        PLAN DE CONTENIDOS GENERADO POR SOFTIFY AI MARKETING © 2026
+    </footer>
+
+</body>
+
+</html>

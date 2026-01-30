@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Softify | Viral Reel Structures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .font-mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* PHONE SCREEN (9:16) */
+        .phone-screen {
+            width: 320px;
+            height: 568px;
+            /* Escala iPhone SE aprox */
+            background-color: #111;
+            border: 8px solid #222;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        /* SAFE ZONES (UI de Instagram) */
+        .ui-overlay {
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            z-index: 50;
+        }
+
+        .ui-right {
+            position: absolute;
+            right: 10px;
+            bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .ui-bottom {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            width: 75%;
+        }
+
+        /* BACKGROUND VIDEO SIMULATION */
+        .video-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: radial-gradient(circle at center, #222 0%, #000 100%);
+        }
+
+        .code-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='0' y='20' fill='%23333' font-family='monospace' font-size='10'%3Eif(err){%3C/text%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="relative group">
+        <h3 class="text-center text-[#f1c500] font-mono text-xs mb-4 uppercase">01. The "Code Aesthetic"</h3>
+        <div class="phone-screen">
+            <div class="video-bg code-bg opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80"></div>
+
+            <div class="absolute top-[20%] left-0 w-full text-center px-4 z-10">
+                <div class="inline-block bg-[#f1c500] text-black font-black text-lg px-2 py-1 rotate-[-2deg] mb-2">POV:
+                </div>
+                <h2 class="text-2xl font-bold text-white drop-shadow-md leading-tight">
+                    Dejas de usar Excel y contratas una agencia de <span class="text-[#f1c500]">Ingeniería.</span>
+                </h2>
+            </div>
+
+            <div
+                class="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[120px] bg-neutral-900/80 border border-white/10 rounded-xl backdrop-blur-md flex items-center justify-center border-[#f1c500]/50 shadow-[0_0_30px_rgba(241,197,0,0.2)]">
+                <div class="text-center">
+                    <p class="text-[10px] font-mono text-neutral-400">Ventas Hoy</p>
+                    <p class="text-3xl font-black text-white">$4,250.00</p>
+                    <div class="w-full bg-gray-700 h-1 mt-2 rounded overflow-hidden">
+                        <div class="bg-[#f1c500] h-full w-[80%]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui-overlay">
+                <div class="ui-right text-white text-xl">
+                    <span class="iconify" data-icon="lucide:heart"></span>
+                    <span class="iconify" data-icon="lucide:message-circle"></span>
+                    <span class="iconify" data-icon="lucide:send"></span>
+                </div>
+                <div class="ui-bottom">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-[#f1c500] flex items-center justify-center text-black font-bold text-[8px]">
+                            S</div>
+                        <span class="text-xs font-bold">softify.agency</span>
+                    </div>
+                    <p class="text-[10px] text-neutral-300 leading-tight">La automatización no es un gasto, es la mejor
+                        inversión... <span class="text-neutral-500">más</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative group">
+        <h3 class="text-center text-[#f1c500] font-mono text-xs mb-4 uppercase">02. The "Hard Truth"</h3>
+        <div class="phone-screen">
+            <div class="video-bg bg-neutral-900 flex items-center justify-center">
+                <span class="iconify text-neutral-800 w-32 h-32" data-icon="lucide:keyboard"></span>
+            </div>
+
+            <div class="absolute top-[15%] left-4 right-12 z-10">
+                <div
+                    class="bg-white text-black p-3 rounded-tr-xl rounded-tl-xl rounded-br-xl text-xs font-medium shadow-lg mb-2">
+                    "¿Me puedes hacer una app tipo Uber por $200?"
+                </div>
+                <div class="text-[8px] text-neutral-500 ml-1">Cliente Potencial • 10:42 AM</div>
+            </div>
+
+            <div class="absolute top-[30%] right-4 left-12 z-10 flex justify-end">
+                <div
+                    class="bg-[#f1c500] text-black p-3 rounded-tl-xl rounded-bl-xl rounded-tr-xl text-xs font-bold shadow-lg">
+                    El software barato sale caro. Hablemos de escalabilidad. 📉
+                </div>
+            </div>
+
+            <div class="ui-overlay">
+                <div class="ui-right text-white text-xl">
+                    <span class="iconify" data-icon="lucide:heart"></span>
+                    <span class="iconify" data-icon="lucide:message-circle"></span>
+                </div>
+                <div class="ui-bottom">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-[#f1c500] flex items-center justify-center text-black font-bold text-[8px]">
+                            S</div>
+                        <span class="text-xs font-bold">softify.agency</span>
+                    </div>
+                    <p class="text-[10px] text-neutral-300 leading-tight">Deja de buscar programadores baratos... <span
+                            class="text-neutral-500">más</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative group">
+        <h3 class="text-center text-[#f1c500] font-mono text-xs mb-4 uppercase">03. The Build Process</h3>
+        <div class="phone-screen bg-black">
+
+            <div class="h-1/2 border-b border-white/10 relative overflow-hidden bg-[#0d0d0d]">
+                <div class="absolute top-2 left-2 px-2 py-1 bg-white/10 text-[8px] text-[#f1c500] font-mono rounded">
+                    WIREFRAME</div>
+                <div class="flex items-center justify-center h-full opacity-30">
+                    <div class="w-20 h-20 border-2 border-dashed border-white rounded"></div>
+                </div>
+            </div>
+
+            <div class="h-1/2 relative overflow-hidden bg-neutral-900">
+                <div
+                    class="absolute top-2 left-2 px-2 py-1 bg-[#f1c500] text-[8px] text-black font-bold font-mono rounded">
+                    FINAL PRODUCT</div>
+                <div class="flex items-center justify-center h-full">
+                    <div class="w-full h-full bg-[url('img/phone.png')] bg-cover bg-center"></div>
+                </div>
+            </div>
+
+            <div class="absolute top-[50%] left-0 w-full h-1 bg-[#f1c500] shadow-[0_0_20px_rgba(241,197,0,0.8)] z-20">
+            </div>
+
+            <div class="ui-overlay">
+                <div class="ui-right text-white text-xl">
+                    <span class="iconify" data-icon="lucide:heart"></span>
+                    <span class="iconify" data-icon="lucide:message-circle"></span>
+                </div>
+                <div class="ui-bottom">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-[#f1c500] flex items-center justify-center text-black font-bold text-[8px]">
+                            S</div>
+                        <span class="text-xs font-bold">softify.agency</span>
+                    </div>
+                    <p class="text-[10px] text-neutral-300 leading-tight">De la idea a la realidad en 4 semanas... <span
+                            class="text-neutral-500">más</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

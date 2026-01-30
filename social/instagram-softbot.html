@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Softify | SoftBot Content Suite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            padding: 40px;
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
+
+        .font-mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* CONTENEDOR INSTAGRAM PORTRAIT (4:5 Ratio - 1080x1350 scaled down for preview) */
+        .insta-container {
+            width: 360px;
+            height: 450px;
+            background-color: #050505;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #222;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            flex-shrink: 0;
+        }
+
+        /* UTILIDADES DE FONDO */
+        .bg-grid {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .gold-glow-top {
+            background: radial-gradient(circle at top, rgba(241, 197, 0, 0.15) 0%, transparent 70%);
+        }
+
+        .gold-glow-bottom {
+            background: radial-gradient(circle at bottom, rgba(241, 197, 0, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="text-xl font-bold text-[#f1c500] mb-6 uppercase tracking-widest">// Carousel Template: The Strategic
+        Shift</h2>
+    <div class="flex gap-6 overflow-x-auto pb-12">
+
+        <div class="insta-container bg-[#050505]">
+            <div class="absolute inset-0 bg-grid"></div>
+            <div class="absolute inset-0 gold-glow-top"></div>
+
+            <div class="p-6 h-full flex flex-col justify-between relative z-10">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="iconify text-[#f1c500]" data-icon="lucide:sparkles"></span>
+                        <span class="text-[10px] font-mono text-neutral-500 uppercase">Nueva Estrategia</span>
+                    </div>
+                    <h1 class="text-4xl font-black uppercase leading-[0.9]">
+                        ¿Tu negocio <br> crece pero <br> tú trabajas <br> <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-[#f1c500] to-yellow-600">el
+                            doble?</span>
+                    </h1>
+                </div>
+
+                <div class="relative h-[220px] mt-4">
+                    <img src="img/robot-teach.png"
+                        class="absolute bottom-0 right-[-20px] h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+                        alt="SoftBot Teaching">
+                </div>
+
+                <div class="flex justify-between items-center border-t border-white/10 pt-4">
+                    <p class="text-[10px] text-neutral-400">Desliza para entender la trampa de la productividad.</p>
+                    <span class="iconify text-[#f1c500] animate-bounce" data-icon="lucide:arrow-right"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="insta-container bg-[#0a0a0a]">
+            <div class="p-6 h-full flex flex-col">
+                <h2 class="text-xl font-bold text-red-500 uppercase mb-2">El cuello de botella eres tú.</h2>
+                <p class="text-xs text-neutral-400 mb-8 leading-relaxed">Cuando intentas manejar todo manualmente
+                    (Excel, WhatsApp, Inventario), tu capacidad humana llega al límite, frenando las ventas.</p>
+
+                <div class="flex-grow relative flex items-center justify-center">
+                    <div class="absolute w-48 h-48 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div>
+                    <img src="img/robot-zen.png" class="relative z-10 h-[180px] object-contain grayscale opacity-60"
+                        alt="SoftBot Tired">
+                    <div class="absolute bottom-4 text-center w-full">
+                        <p class="text-[10px] font-mono text-red-400 uppercase">Status: Sistema Sobrecargado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="insta-container bg-[#050505]">
+            <div class="absolute inset-0 bg-grid"></div>
+            <div class="absolute inset-0 gold-glow-bottom"></div>
+
+            <div class="p-6 h-full flex flex-col text-center items-center justify-center relative z-10">
+                <h2 class="text-xl font-black uppercase mb-4">
+                    Conoce a tu nuevo <br> <span class="text-[#f1c500]">Socio Digital</span>
+                </h2>
+                <p class="text-xs text-neutral-400 mb-8 max-w-[250px]">
+                    Un ecosistema de software a medida que trabaja 24/7, no se cansa y no comete errores humanos.
+                </p>
+
+                <div class="relative h-[220px]">
+                    <div
+                        class="absolute inset-0 bg-[radial-gradient(circle,rgba(241,197,0,0.2)_0%,transparent_60%)] animate-pulse">
+                    </div>
+                    <img src="img/robot-win.png"
+                        class="relative z-10 h-full object-contain drop-shadow-[0_0_30px_rgba(241,197,0,0.4)]"
+                        alt="SoftBot Winning">
+                </div>
+            </div>
+        </div>
+
+        <div class="insta-container bg-[#080808] flex flex-col">
+            <div
+                class="h-1/2 bg-[#0c0c0c] p-4 font-mono text-[9px] text-neutral-500 overflow-hidden relative border-b border-white/10">
+                <div class="absolute top-2 right-2 text-[#f1c500]">// Backend Logic</div>
+                <span class="text-purple-400">func</span> automateSales() {<br>
+                &nbsp;&nbsp;<span class="text-blue-400">if</span> newOrder {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;validatePayment()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;updateInventory()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;notifyClient(<span class="text-green-400">"WhatsAppAPI"</span>)<br>
+                &nbsp;&nbsp;}<br>
+                }
+            </div>
+            <div class="h-1/2 relative flex items-end justify-center p-4">
+                <div class="absolute inset-0 gold-glow-bottom opacity-50"></div>
+                <img src="img/robot-code.png" class="h-[160px] object-contain relative z-10" alt="SoftBot Coding">
+                <p class="absolute top-4 left-4 text-xs font-bold text-white uppercase">Ingeniería Real.<br><span
+                        class="text-[#f1c500] text-[10px] font-mono">Nada de plantillas.</span></p>
+            </div>
+        </div>
+
+        <div class="insta-container bg-[#050505]">
+            <div class="absolute inset-0 bg-grid opacity-30"></div>
+            <div class="p-8 h-full flex flex-col justify-center items-center relative z-10">
+
+                <div class="mb-8 text-center">
+                    <span class="text-[10px] font-mono text-neutral-500 uppercase mb-2 block">Resultado Promedio</span>
+                    <h2 class="text-6xl font-black text-[#f1c500]">+45%</h2>
+                    <p class="text-sm font-bold text-white uppercase mt-2">En Eficiencia Operativa</p>
+                </div>
+
+                <div class="w-full h-24 flex items-end gap-2 mb-8">
+                    <div class="w-1/4 h-[40%] bg-neutral-800 rounded-t relative group"><span
+                            class="absolute -top-4 inset-x-0 text-center text-[8px] text-neutral-500 opacity-0 group-hover:opacity-100">Antes</span>
+                    </div>
+                    <div class="w-1/4 h-[50%] bg-neutral-800 rounded-t"></div>
+                    <div class="w-1/4 h-[70%] bg-neutral-800 rounded-t"></div>
+                    <div class="w-1/4 h-[100%] bg-gradient-to-t from-[#f1c500]/50 to-[#f1c500] rounded-t relative"><span
+                            class="absolute -top-6 inset-x-0 text-center text-[10px] font-bold text-[#f1c500]">Ahora</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <img src="img/robot-win.png" class="h-10 w-10 object-contain" alt="Mini Softbot">
+                    <p class="text-[9px] text-neutral-400 italic">"Mis clientes ahora reciben respuestas automáticas en
+                        segundos, no horas." - Cliente de Punto Seguro</p>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="insta-container bg-[#f1c500] text-black flex flex-col justify-center items-center text-center p-6 relative overflow-hidden">
+            <div
+                class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]">
+            </div>
+
+            <img src="img/robot-teach.png" class="h-[150px] object-contain mb-6 relative z-10 drop-shadow-xl"
+                alt="SoftBot CTA">
+
+            <h2 class="text-2xl font-black uppercase mb-2 relative z-10 leading-tight">¿Hablamos de <br> tu proyecto?
+            </h2>
+            <p class="text-xs font-medium mb-8 max-w-[200px] relative z-10 leading-tight">
+                Agenda una sesión de Discovery gratuita de 15 minutos con nuestros ingenieros.
+            </p>
+
+            <div
+                class="bg-black text-[#f1c500] px-6 py-3 rounded-full font-bold uppercase text-xs tracking-widest flex items-center gap-2 shadow-2xl relative z-10">
+                <span>Link en la Bio</span>
+                <span class="iconify" data-icon="lucide:arrow-up-right"></span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="border-t border-white/10 my-12"></div>
+    <h2 class="text-xl font-bold text-[#f1c500] mb-6 uppercase tracking-widest">// Single Post Templates</h2>
+    <div class="flex gap-6 flex-wrap">
+
+        <div class="insta-container bg-[#050505] flex items-center justify-center p-6 relative">
+            <div class="absolute inset-0 bg-grid opacity-50"></div>
+            <div class="absolute inset-0 gold-glow-top opacity-50"></div>
+
+            <div
+                class="bg-neutral-900/80 backdrop-blur-xl border border-[#f1c500]/30 rounded-2xl p-6 w-full shadow-[0_0_40px_rgba(241,197,0,0.15)] relative z-20">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-[#f1c500] rounded-lg flex items-center justify-center">
+                            <span class="iconify text-black" data-icon="lucide:bell-ring" width="16"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-sm leading-none">Sistema Softify</h3>
+                            <span class="text-[9px] text-neutral-500 font-mono">Hace 2 min • Módulo de Ventas</span>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-lg font-black text-white mb-1">¡Nuevo Hito Alcanzado! 🚀</h4>
+                <p class="text-xs text-neutral-300 leading-relaxed mb-4">
+                    Tu plataforma ha procesado automáticamente <span class="text-[#f1c500] font-bold">1,000
+                        pedidos</span> este mes sin intervención manual.
+                </p>
+                <div class="h-1 w-full bg-neutral-800 rounded overflow-hidden">
+                    <div class="h-full w-full bg-[#f1c500] animate-pulse"></div>
+                </div>
+            </div>
+
+            <img src="img/robot-win.png" class="absolute bottom-0 right-0 h-[180px] object-contain z-10 drop-shadow-xl"
+                alt="SoftBot Happy">
+        </div>
+
+
+        <div class="insta-container bg-black p-8 flex flex-col justify-between relative">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-[#f1c500] opacity-5 blur-[80px] rounded-full"></div>
+
+            <div class="relative z-10">
+                <span class="text-8xl text-[#f1c500] font-serif absolute -top-10 -left-4 opacity-30">"</span>
+                <h2 class="text-2xl text-white font-bold uppercase leading-snug font-sans mt-4">
+                    No necesitas más <br> personal. <br> Necesitas <br> mejor <span
+                        class="text-[#f1c500]">software.</span>
+                </h2>
+            </div>
+
+            <div class="relative z-10 flex items-end justify-between">
+                <div>
+                    <div class="w-12 h-1 bg-[#f1c500] mb-4"></div>
+                    <p class="text-[10px] text-neutral-400 font-mono uppercase tracking-widest">Filosofía Softify</p>
+                </div>
+                <img src="img/robot-code.png"
+                    class="h-[140px] object-contain -mb-8 -mr-4 opacity-80 grayscale hover:grayscale-0 transition-all"
+                    alt="SoftBot Thinking">
+            </div>
+        </div>
+
+
+        <div class="insta-container bg-[#080808] relative overflow-hidden">
+            <div class="absolute inset-0 gold-glow-bottom opacity-30"></div>
+
+            <div class="p-8 h-full flex flex-col text-center items-center relative z-10">
+                <span
+                    class="text-[10px] font-mono text-[#f1c500] uppercase tracking-widest mb-4 border border-[#f1c500] px-3 py-1 rounded-full">Modo
+                    Automático: ON</span>
+
+                <h2 class="text-3xl font-black uppercase text-white leading-none mb-6">
+                    Tu negocio <br> trabaja <br> mientras tú <br> descansas.
+                </h2>
+
+                <div class="relative h-[200px] w-full flex justify-center">
+                    <div class="absolute bottom-0 w-32 h-32 bg-[#f1c500]/20 rounded-full blur-2xl animate-pulse"></div>
+                    <img src="img/robot-zen.png"
+                        class="relative z-10 h-full object-contain drop-shadow-[0_0_20px_rgba(241,197,0,0.3)]"
+                        alt="SoftBot Zen">
+                </div>
+
+                <p class="text-[10px] text-neutral-400 mt-6">
+                    Sistemas de agendamiento y ventas 24/7. Recarga tu energía, nosotros nos ocupamos del código.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
